@@ -1,26 +1,26 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-enum BinaryColor {
+public enum BinaryColor {
     White, Black
 }
 
 public class ColorController : MonoBehaviour {
 
-    BinaryColor Color {
+    public BinaryColor Color {
         get {
             if (color == white) return BinaryColor.White;
             else return BinaryColor.Black;
         }
+        set {
+            int mycolor;
+            if (value == BinaryColor.White) mycolor = 0;
+            else mycolor = 1;
+            animator.SetFrame(mycolor);
+        }
     }
 
-    public int white = 0;
-    public int black = 1;
-
     public tk2dSpriteAnimator animator;
-
-    bool changingColor = false;
-    int color; 
 
     public void SwitchColor() {
         if (changingColor) return;
@@ -52,4 +52,9 @@ public class ColorController : MonoBehaviour {
     void setChangingColorFalse() {
         changingColor = false;
     }
+
+    int white = 0;
+    int black = 1;
+    bool changingColor = false;
+    int color;
 }

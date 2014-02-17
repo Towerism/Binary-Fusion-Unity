@@ -662,9 +662,11 @@
      <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenShakeScale.cs" />
      <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenStop.cs" />
      <Compile Include="Assets\PlayMaker\Include\iTweenFSMEvents.cs" />
+     <Compile Include="Assets\Scripts\BasicGun.cs" />
      <Compile Include="Assets\Scripts\ColorController.cs" />
+     <Compile Include="Assets\Scripts\DestroyOffScreen.cs" />
      <Compile Include="Assets\Scripts\ExtensionMethods\ExtensionMethods.cs" />
-     <Compile Include="Assets\Scripts\GunController.cs" />
+     <Compile Include="Assets\Scripts\LinearVelocity.cs" />
      <Compile Include="Assets\Scripts\PlayerInput.cs" />
      <Compile Include="Assets\TK2DROOT\tk2d\Code\Camera\tk2dCamera.cs" />
      <Compile Include="Assets\TK2DROOT\tk2d\Code\Camera\tk2dCameraAnchor.cs" />
