@@ -8,8 +8,9 @@ public class PlayerInput : MonoBehaviour {
     public float horizontalSpeed;
     public float verticalSpeed;
     public tk2dSpriteAnimator animator;
+    public ColorController color;/*
     int color = 0;
-    bool changingColor = false;
+    bool changingColor = false;*/
 
     Transform _transform;
 
@@ -32,13 +33,16 @@ public class PlayerInput : MonoBehaviour {
     }
 
     void colorInput() {
-        if (Input.GetKeyDown(KeyCode.X) && !changingColor) {
+        if (Input.GetKeyDown(KeyCode.X)) {
+            color.SwitchColor();
+        }
+        /*if (Input.GetKeyDown(KeyCode.X) && !changingColor) {
             iTween.ScaleTo(gameObject, iTween.Hash("scale", new Vector3(0, 1, 0), "time", .25f, "oncomplete", "switchColor", "easetype", iTween.EaseType.linear));
             changingColor = true;
-        }
+        }*/
     }
 
-    void switchColor() {
+    /*void switchColor() {
         color = color == 0 ? 1 : 0;
         animator.SetFrame(color);
         iTween.ScaleTo(gameObject, iTween.Hash("scale", new Vector3(1, 1, 0), "time", .25f, "easetype", iTween.EaseType.linear, "oncomplete", "setChangingColorFalse"));
@@ -46,5 +50,5 @@ public class PlayerInput : MonoBehaviour {
 
     void setChangingColorFalse() {
         changingColor = false;
-    }
+    }*/
 }
