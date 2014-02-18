@@ -9,7 +9,7 @@ public class PlayerInput : MonoBehaviour {
     public float verticalSpeed;
     public tk2dSpriteAnimator animator;
     public ColorController color;
-    public BasicGun gun;
+    public AbstractGun gun;
 
     Transform _transform;
 

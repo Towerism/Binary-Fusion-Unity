@@ -3,11 +3,9 @@ using System.Collections;
 
 using ExtensionMethods;
 
-public class BasicGun : MonoBehaviour {
+public class BasicGun : AbstractGun {
 
-    public GameObject bulletPrefab;
-
-    public void Shoot() {
+    public override void Shoot() {
         GameObject go = Instantiate(bulletPrefab, _transform.position, Quaternion.identity) as GameObject;
         go.SyncColor(gameObject);
         LinearVelocity lv = go.GetComponent<LinearVelocity>();
