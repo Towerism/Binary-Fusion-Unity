@@ -2,33 +2,37 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class DestroyOffScreen : MonoBehaviour {
+using ExtensionMethods;
 
-    public float screenWidth = 400;
-    public float screenHeight = 800;
+public class DestroyOffScreen : MonoBehaviour {
 
     public bool upperBoundary = true;
     public bool lowerBoundary = true;
     public bool leftBoundary = true;
     public bool rightBoundary = true;
 
-    public int xPadding = 0;
-    public int yPadding = 0;
+    public bool useSpriteBounds = true;
+    public float xPadding = 0;
+    public float yPadding = 0;
 
 	// Use this for initialization
 	void Start () {
         _transform = transform;
+        if (useSpriteBounds) {
+            xPadding = gameObject.halfSpriteWidth();
+            yPadding = gameObject.halfSpriteHeight();
+        }
     }
 	
 	// Update is called once per frame
 	void Update () {
         if (_transform.position.x < 0 - xPadding && leftBoundary)
             Destroy(gameObject);
-        if (_transform.position.x > screenWidth + xPadding && rightBoundary)
+        if (_transform.position.x > camera.ActualWidth() + xPadding && rightBoundary)
             Destroy(gameObject);
         if (_transform.position.y < 0 - yPadding && lowerBoundary)
             Destroy(gameObject);
-        if (_transform.position.y > screenHeight + yPadding && upperBoundary)
+        if (_transform.position.y > camera.ActualHeight() + yPadding && upperBoundary)
             Destroy(gameObject);
 	}
 

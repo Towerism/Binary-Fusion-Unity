@@ -5,10 +5,6 @@ public class LinearVelocity : MonoBehaviour {
 
     public Vector2 velocity;
 
-    public void Init(Vector2 v) {
-        velocity = v;
-    }
-
 	// Use this for initialization
 	void Start () {
         _transform = transform;

@@ -14,5 +14,25 @@ namespace ExtensionMethods {
             ColorController bColor = b.GetComponent<ColorController>();
             aColor.Color = bColor.Color;
         }
+
+        public static float halfSpriteWidth(this GameObject go) {
+            tk2dSprite sprite = go.GetComponent<tk2dSprite>();
+            return sprite.GetBounds().size.x/2;
+        }
+
+        public static float halfSpriteHeight(this GameObject go) {
+            tk2dSprite sprite = go.GetComponent<tk2dSprite>();
+            return sprite.GetBounds().size.y/2;
+        }
+    }
+
+    public static class ScreenExtensions {
+        public static int ActualWidth(this Camera cam) {
+            return tk2dCamera.Instance.nativeResolutionWidth;
+        }
+
+        public static int ActualHeight(this Camera cam) {
+            return tk2dCamera.Instance.nativeResolutionHeight;
+        }
     }
 }
