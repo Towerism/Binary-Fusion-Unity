@@ -14,7 +14,6 @@ public class PlayerInput : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         _transform = transform;
-        _camera = tk2dCamera.Instance;
 	}
 	
 	// Update is called once per frame
@@ -27,11 +26,7 @@ public class PlayerInput : MonoBehaviour {
     void movement() {
         Vector2 hmove = Vector2.right * Input.GetAxis("Horizontal");
         Vector2 vmove = Vector2.up * Input.GetAxis("Vertical");
-        //if ((hmove.x < 0 && _transform.position.x < 50) ||
-       //     (hmove.x > 0 && _transform.position.x > _camera.NativeResolution.x - 50)) return;
         _transform.Translate(hmove * horizontalSpeed);
-       // if ((vmove.y < 0 && _transform.position.y < 50) ||
-        //    (vmove.y > 0 && _transform.position.y > _camera.NativeResolution.y - 50)) return;
         _transform.Translate(vmove * verticalSpeed);
     }
 
@@ -46,5 +41,4 @@ public class PlayerInput : MonoBehaviour {
     }
 
     Transform _transform;
-    tk2dCamera _camera;
 }

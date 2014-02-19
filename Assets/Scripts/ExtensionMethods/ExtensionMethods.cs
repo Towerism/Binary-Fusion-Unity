@@ -15,6 +15,12 @@ namespace ExtensionMethods {
             aColor.Color = bColor.Color;
         }
 
+        public static bool ColorEquals(this GameObject a, GameObject b) {
+            BinaryColor aColor = a.GetComponent<ColorController>().Color;
+            BinaryColor bColor = b.GetComponent<ColorController>().Color;
+            return aColor == bColor;
+        }
+
         public static float halfSpriteWidth(this GameObject go) {
             tk2dSprite sprite = go.GetComponent<tk2dSprite>();
             return sprite.GetBounds().size.x/2;

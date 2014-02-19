@@ -116,6 +116,7 @@
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\TestBase.cs" />
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\TestDontDestroyOnLoad.cs" />
      <Compile Include="Assets\Photon Unity Networking\UtilityScripts\TimeKeeper.cs" />
+     <Compile Include="Assets\Pixelplacement\iTweenPath\iTweenPath.cs" />
      <Compile Include="Assets\PlayMaker\Actions\ActivateGameObject.cs" />
      <Compile Include="Assets\PlayMaker\Actions\AddAnimationClip.cs" />
      <Compile Include="Assets\PlayMaker\Actions\AddComponent.cs" />
@@ -667,6 +668,7 @@
      <Compile Include="Assets\Scripts\General\ColorController.cs" />
      <Compile Include="Assets\Scripts\General\DestroyOffScreen.cs" />
      <Compile Include="Assets\Scripts\General\HealthController.cs" />
+     <Compile Include="Assets\Scripts\General\LinearRotation.cs" />
      <Compile Include="Assets\Scripts\General\LinearVelocity.cs" />
      <Compile Include="Assets\Scripts\PlayerInput.cs" />
      <Compile Include="Assets\Scripts\Weapons\AbstractGun.cs" />

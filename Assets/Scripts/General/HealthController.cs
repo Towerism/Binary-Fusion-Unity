@@ -1,18 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
+using ExtensionMethods;
 
 public class HealthController : MonoBehaviour {
 
-    public int startingHealth;
+    public float startingHealth;
+    public float resistance;
 
-    public int Health {
+    public float Health {
         get {
             return health;
         }
     }
 
-    public void Damage(int amount) {
-        health -= amount;
+    public void Damage(int amount, GameObject other) {
+        float modifiedAmount = amount;
+        if (gameObject.ColorEquals(other))
+            modifiedAmount *= 1 - resistance;
+        health -= modifiedAmount;
     }
 
     public void Heal(int amount) {
@@ -33,5 +38,5 @@ public class HealthController : MonoBehaviour {
 	
 	}
 
-    int health;
+    float health;
 }

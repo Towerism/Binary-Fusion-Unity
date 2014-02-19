@@ -3,7 +3,7 @@ using System.Collections;
 
 using ExtensionMethods;
 
-public class PlayerBasicGun: AbstractGun {
+public class PlayerBasicGun : AbstractGun {
 
     public override void Shoot() {
         GameObject go = Instantiate(bulletPrefab, _transform.position, Quaternion.identity) as GameObject;

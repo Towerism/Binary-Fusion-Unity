@@ -56,6 +56,7 @@
      <Compile Include="Assets\Photon Unity Networking\PlayMaker\Editor\PlayMakerPhotonEditorUtility.cs" />
      <Compile Include="Assets\Photon Unity Networking\PlayMaker\Editor\PlayMakerPhotonGameObjectProxyEditor.cs" />
      <Compile Include="Assets\Photon Unity Networking\PlayMaker\Editor\PlayMakerPhotonWizard.cs" />
+     <Compile Include="Assets\Pixelplacement\iTweenPath\Editor\iTweenPathEditor.cs" />
      <Compile Include="Assets\PlayMaker\Actions\Editor\LookAtActionEditor.cs" />
      <Compile Include="Assets\PlayMaker\Actions\Editor\MoveTowardsActionEditor.cs" />
      <Compile Include="Assets\PlayMaker\Actions\Editor\SetCameraFOVActionEditor.cs" />
