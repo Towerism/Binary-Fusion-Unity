@@ -6,18 +6,16 @@ using ExtensionMethods;
 public class PlayerBasicGun : AbstractGun {
 
     public override void Shoot() {
-        GameObject go = Instantiate(bulletPrefab, _transform.position, Quaternion.identity) as GameObject;
-        go.SyncColor(gameObject);
+        createBullet();
     }
 
-	// Use this for initialization
-    void Start() {
-        _transform = transform;
+    // Use this for initialization
+    protected override void Start() {
+        base.Start();
     }
+
 	// Update is called once per frame
 	void Update () {
 	
 	}
-
-    Transform _transform;
 }

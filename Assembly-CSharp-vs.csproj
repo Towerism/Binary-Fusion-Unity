@@ -664,6 +664,7 @@
      <Compile Include="Assets\PlayMaker\Actions\iTween\iTweenStop.cs" />
      <Compile Include="Assets\PlayMaker\Include\iTweenFSMEvents.cs" />
      <Compile Include="Assets\Scripts\ExtensionMethods\ExtensionMethods.cs" />
+     <Compile Include="Assets\Scripts\General\BulletController.cs" />
      <Compile Include="Assets\Scripts\General\ClampSpriteWithinCamera.cs" />
      <Compile Include="Assets\Scripts\General\ColorController.cs" />
      <Compile Include="Assets\Scripts\General\DestroyOffScreen.cs" />
@@ -672,6 +673,7 @@
      <Compile Include="Assets\Scripts\General\LinearVelocity.cs" />
      <Compile Include="Assets\Scripts\PlayerInput.cs" />
      <Compile Include="Assets\Scripts\Weapons\AbstractGun.cs" />
+     <Compile Include="Assets\Scripts\Weapons\EnemyWeapon\EnemyBasicGun.cs" />
      <Compile Include="Assets\Scripts\Weapons\PlayerWeapon\PlayerBasicGun.cs" />
      <Compile Include="Assets\TK2DROOT\tk2d\Code\Camera\tk2dCamera.cs" />
      <Compile Include="Assets\TK2DROOT\tk2d\Code\Camera\tk2dCameraAnchor.cs" />

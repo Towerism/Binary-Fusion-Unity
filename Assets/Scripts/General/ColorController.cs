@@ -39,14 +39,14 @@ public class ColorController : MonoBehaviour {
 	}
 
     void animate() {
-        iTween.ScaleTo(gameObject, iTween.Hash("scale", new Vector3(0, 1, 0), "time", .25f, "oncomplete", "animateCallback", "easetype", iTween.EaseType.linear));
+        iTween.ScaleTo(gameObject, iTween.Hash("scale", new Vector3(0, 1, 0), "time", .25f, "oncomplete", "animateCallback", "easetype", iTween.EaseType.easeInQuad));
         changingColor = true;
     }
 
     void animateCallback() {
         color = color == black ? white : black;
         animator.SetFrame(color);
-        iTween.ScaleTo(gameObject, iTween.Hash("scale", new Vector3(1, 1, 0), "time", .25f, "easetype", iTween.EaseType.linear, "oncomplete", "setChangingColorFalse"));
+        iTween.ScaleTo(gameObject, iTween.Hash("scale", new Vector3(1, 1, 0), "time", .25f, "easetype", iTween.EaseType.easeInQuad, "oncomplete", "setChangingColorFalse"));
     }
 
     void setChangingColorFalse() {

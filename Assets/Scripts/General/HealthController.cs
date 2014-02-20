@@ -4,8 +4,8 @@ using ExtensionMethods;
 
 public class HealthController : MonoBehaviour {
 
-    public float startingHealth;
-    public float resistance;
+    public float startingHealth = 1f;
+    public float resistance = 0.5f;
 
     public float Health {
         get {
